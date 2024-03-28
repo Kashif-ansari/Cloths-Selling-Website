@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="99b17b1f15bf4a91897ca7fdc5fd58e6" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="Model.Account" Width="1.5" PointX="11" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Bill" Width="1.5" PointX="9.125" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Customer" Width="1.5" PointX="13.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Expense" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Incentive" Width="1.5" PointX="2.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Inventory" Width="1.5" PointX="2.625" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Item" Width="1.5" PointX="16.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Outlet" Width="1.5" PointX="15.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Payment" Width="1.5" PointX="11.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Sale" Width="1.5" PointX="13.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Staff" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Stock" Width="1.5" PointX="6.875" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Vendor" Width="1.5" PointX="8.875" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK__Accounts__E_id__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Accounts__Sell_I__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Expense__Bill_ID__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sales__C_id__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Expense__I_ID__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Expense__Incenti__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Expense__Stock_I__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Incentive__Staff__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Outlet__Item_ID__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sales__O_id__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Sales__P_ID__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK__Stock__Vendor_ID__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

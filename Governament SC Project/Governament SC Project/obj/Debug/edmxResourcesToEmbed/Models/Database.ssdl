@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Accounts">
+    <Key>
+      <PropertyRef Name="Entry_No" />
+    </Key>
+    <Property Name="Entry_No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="E_id" Type="int" />
+    <Property Name="Sell_ID" Type="int" />
+    <Property Name="Name" Type="varchar" MaxLength="25" />
+    <Property Name="Discription" Type="varchar" MaxLength="45" />
+    <Property Name="Credit" Type="int" />
+    <Property Name="Debit" Type="int" />
+  </EntityType>
+  <EntityType Name="Bills">
+    <Key>
+      <PropertyRef Name="Bill_ID" />
+    </Key>
+    <Property Name="Bill_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="B_Name" Type="varchar" MaxLength="25" />
+    <Property Name="Total" Type="int" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="C_ID" />
+    </Key>
+    <Property Name="C_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="10" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="10" />
+    <Property Name="User_Name" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="varchar" MaxLength="35" />
+    <Property Name="Contact" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="25" />
+    <Property Name="City" Type="varchar" MaxLength="10" />
+    <Property Name="Password" Type="varchar" MaxLength="25" />
+    <Property Name="Confirm_Password" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="E_ID" />
+    </Key>
+    <Property Name="E_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Incentives_ID" Type="int" />
+    <Property Name="Stock_ID" Type="int" />
+    <Property Name="Bill_ID" Type="int" />
+    <Property Name="I_ID" Type="int" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="Name" Type="varchar" MaxLength="25" />
+    <Property Name="Discription" Type="varchar" MaxLength="45" />
+    <Property Name="Total" Type="int" />
+  </EntityType>
+  <EntityType Name="Incentives">
+    <Key>
+      <PropertyRef Name="Incentives_ID" />
+    </Key>
+    <Property Name="Incentives_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Staff_ID" Type="int" />
+    <Property Name="Ammount" Type="int" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="I_ID" />
+    </Key>
+    <Property Name="I_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Inventory_Name" Type="varchar" MaxLength="10" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Item_ID" />
+    </Key>
+    <Property Name="Item_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_Name" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Outlet">
+    <Key>
+      <PropertyRef Name="O_ID" />
+    </Key>
+    <Property Name="O_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="Size" Type="varchar" MaxLength="10" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="P_ID" />
+    </Key>
+    <Property Name="P_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="Sell_ID" />
+    </Key>
+    <Property Name="Sell_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="C_id" Type="int" />
+    <Property Name="O_id" Type="int" />
+    <Property Name="P_ID" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Total_Price" Type="int" />
+  </EntityType>
+  <EntityType Name="Staff">
+    <Key>
+      <PropertyRef Name="Staff_ID" />
+    </Key>
+    <Property Name="Staff_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="First_Name" Type="varchar" MaxLength="10" />
+    <Property Name="Last_Name" Type="varchar" MaxLength="10" />
+    <Property Name="User_Name" Type="varchar" MaxLength="15" />
+    <Property Name="Designation" Type="varchar" MaxLength="15" />
+    <Property Name="Salary" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="35" />
+    <Property Name="Contact" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="25" />
+    <Property Name="City" Type="varchar" MaxLength="10" />
+    <Property Name="Password" Type="varchar" MaxLength="25" />
+    <Property Name="Confirm_Password" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="S_ID" />
+    </Key>
+    <Property Name="S_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stock_Name" Type="varchar" MaxLength="10" />
+    <Property Name="Vendor_ID" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="int" />
+  </EntityType>
+  <EntityType Name="Vendor">
+    <Key>
+      <PropertyRef Name="V_ID" />
+    </Key>
+    <Property Name="V_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vendor_Name" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Association Name="FK__Accounts__E_id__4BAC3F29">
+    <End Role="Expense" Type="Self.Expense" Multiplicity="0..1" />
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expense">
+        <PropertyRef Name="E_ID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="E_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Accounts__Sell_I__4CA06362">
+    <End Role="Sales" Type="Self.Sales" Multiplicity="0..1" />
+    <End Role="Accounts" Type="Self.Accounts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sales">
+        <PropertyRef Name="Sell_ID" />
+      </Principal>
+      <Dependent Role="Accounts">
+        <PropertyRef Name="Sell_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expense__Bill_ID__4222D4EF">
+    <End Role="Bills" Type="Self.Bills" Multiplicity="0..1" />
+    <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bills">
+        <PropertyRef Name="Bill_ID" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="Bill_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expense__I_ID__4316F928">
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="0..1" />
+    <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inventory">
+        <PropertyRef Name="I_ID" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="I_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expense__Incenti__403A8C7D">
+    <End Role="Incentives" Type="Self.Incentives" Multiplicity="0..1" />
+    <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Incentives">
+        <PropertyRef Name="Incentives_ID" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="Incentives_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Expense__Stock_I__412EB0B6">
+    <End Role="Stock" Type="Self.Stock" Multiplicity="0..1" />
+    <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stock">
+        <PropertyRef Name="S_ID" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="Stock_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Incentive__Staff__37A5467C">
+    <End Role="Staff" Type="Self.Staff" Multiplicity="0..1" />
+    <End Role="Incentives" Type="Self.Incentives" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Staff">
+        <PropertyRef Name="Staff_ID" />
+      </Principal>
+      <Dependent Role="Incentives">
+        <PropertyRef Name="Staff_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Outlet__Item_ID__300424B4">
+    <End Role="Item" Type="Self.Item" Multiplicity="0..1" />
+    <End Role="Outlet" Type="Self.Outlet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="Outlet">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sales__C_id__46E78A0C">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="C_ID" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="C_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sales__O_id__47DBAE45">
+    <End Role="Outlet" Type="Self.Outlet" Multiplicity="0..1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Outlet">
+        <PropertyRef Name="O_ID" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="O_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Sales__P_ID__48CFD27E">
+    <End Role="Payment" Type="Self.Payment" Multiplicity="0..1" />
+    <End Role="Sales" Type="Self.Sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="P_ID" />
+      </Principal>
+      <Dependent Role="Sales">
+        <PropertyRef Name="P_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stock__Vendor_ID__2B3F6F97">
+    <End Role="Vendor" Type="Self.Vendor" Multiplicity="0..1" />
+    <End Role="Stock" Type="Self.Stock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor">
+        <PropertyRef Name="V_ID" />
+      </Principal>
+      <Dependent Role="Stock">
+        <PropertyRef Name="Vendor_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bills" EntityType="Self.Bills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expense" EntityType="Self.Expense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Incentives" EntityType="Self.Incentives" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Outlet" EntityType="Self.Outlet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Staff" EntityType="Self.Staff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendor" EntityType="Self.Vendor" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Accounts__E_id__4BAC3F29" Association="Self.FK__Accounts__E_id__4BAC3F29">
+      <End Role="Expense" EntitySet="Expense" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Accounts__Sell_I__4CA06362" Association="Self.FK__Accounts__Sell_I__4CA06362">
+      <End Role="Sales" EntitySet="Sales" />
+      <End Role="Accounts" EntitySet="Accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expense__Bill_ID__4222D4EF" Association="Self.FK__Expense__Bill_ID__4222D4EF">
+      <End Role="Bills" EntitySet="Bills" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expense__I_ID__4316F928" Association="Self.FK__Expense__I_ID__4316F928">
+      <End Role="Inventory" EntitySet="Inventory" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expense__Incenti__403A8C7D" Association="Self.FK__Expense__Incenti__403A8C7D">
+      <End Role="Incentives" EntitySet="Incentives" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Expense__Stock_I__412EB0B6" Association="Self.FK__Expense__Stock_I__412EB0B6">
+      <End Role="Stock" EntitySet="Stock" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Incentive__Staff__37A5467C" Association="Self.FK__Incentive__Staff__37A5467C">
+      <End Role="Staff" EntitySet="Staff" />
+      <End Role="Incentives" EntitySet="Incentives" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Outlet__Item_ID__300424B4" Association="Self.FK__Outlet__Item_ID__300424B4">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Outlet" EntitySet="Outlet" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sales__C_id__46E78A0C" Association="Self.FK__Sales__C_id__46E78A0C">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sales__O_id__47DBAE45" Association="Self.FK__Sales__O_id__47DBAE45">
+      <End Role="Outlet" EntitySet="Outlet" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Sales__P_ID__48CFD27E" Association="Self.FK__Sales__P_ID__48CFD27E">
+      <End Role="Payment" EntitySet="Payment" />
+      <End Role="Sales" EntitySet="Sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stock__Vendor_ID__2B3F6F97" Association="Self.FK__Stock__Vendor_ID__2B3F6F97">
+      <End Role="Vendor" EntitySet="Vendor" />
+      <End Role="Stock" EntitySet="Stock" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

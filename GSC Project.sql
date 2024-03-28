@@ -1,0 +1,221 @@
+CREATE TABLE Inventory(
+I_ID INT PRIMARY KEY IDENTITY (1601,1),
+Inventory_Name VARCHAR(10),
+Quantity int,
+Price int);
+
+CREATE TABLE Stock(
+S_ID INT PRIMARY KEY IDENTITY (2001,1),
+Stock_Name VARCHAR(10),
+Vendor_ID int FOREIGN KEY(Vendor_ID) REFERENCES Vendor(V_ID),
+Quantity int,
+Price int);
+
+drop table stock;
+
+CREATE TABLE Vendor(
+V_ID INT PRIMARY KEY IDENTITY (2501,1),
+Vendor_Name VARCHAR(10));
+
+
+CREATE TABLE Item(
+Item_ID INT PRIMARY KEY IDENTITY (3001,1),
+Item_Name VARCHAR(10));
+
+select * from Item;
+
+CREATE TABLE Outlet(
+O_ID INT PRIMARY KEY IDENTITY (3501,1),
+Item_ID int FOREIGN KEY(Item_ID) REFERENCES Item(Item_ID),
+Size VARCHAR(10),
+Price int);
+
+drop table Outlet;
+
+CREATE TABLE Staff(
+Staff_ID INT PRIMARY KEY IDENTITY (1001,1),
+First_Name VARCHAR(10),
+Last_Name VARCHAR(10),
+User_Name VARCHAR(15) unique,
+Designation VARCHAR(15),
+Salary int,
+[Address] VARCHAR(35),
+Contact VARCHAR(15),
+Email VARCHAR(25),
+City VARCHAR(10),
+[Password] VARCHAR(25),
+Confirm_Password VARCHAR(25));
+
+CREATE TABLE Customer(
+C_ID INT PRIMARY KEY IDENTITY (1501,1),
+First_Name VARCHAR(10),
+Last_Name VARCHAR(10),
+User_Name VARCHAR(15),
+[Address] VARCHAR(35),
+Contact VARCHAR(15),
+Email VARCHAR(25),
+City VARCHAR(10),
+[Password] VARCHAR(25),
+Confirm_Password VARCHAR(25));
+
+CREATE TABLE Incentives(
+Incentives_ID INT PRIMARY KEY IDENTITY (4001,1),
+Staff_ID  int FOREIGN KEY(Staff_ID) REFERENCES Staff(Staff_ID ),
+Ammount int);
+
+CREATE TABLE Bills(
+Bill_ID INT PRIMARY KEY IDENTITY (4501,1),
+B_Name VARCHAR(25),
+Total int);
+select * from Bills;
+
+CREATE TABLE Expense(
+E_ID INT PRIMARY KEY IDENTITY (5001,1),
+Incentives_ID  int FOREIGN KEY(Incentives_ID) REFERENCES Incentives(Incentives_ID ),
+Stock_ID  int FOREIGN KEY(Stock_ID) REFERENCES Stock(S_ID ),
+Bill_ID  int FOREIGN KEY(Bill_ID) REFERENCES Bills(Bill_ID ),
+I_ID  int FOREIGN KEY(I_ID) REFERENCES Inventory(I_ID ),
+[Type] VARCHAR(10),
+[Name] VARCHAR(25),
+[Discription] VARCHAR(45),
+Total int);
+
+CREATE TABLE Payment(
+P_ID INT PRIMARY KEY IDENTITY (101,1),
+[Name] VARCHAR(15));
+
+CREATE TABLE Sales(
+Sell_ID INT PRIMARY KEY IDENTITY (7001,1),
+C_id int FOREIGN KEY(C_ID) REFERENCES Customer(C_ID),
+O_id int FOREIGN KEY(O_ID) REFERENCES Outlet(O_ID),
+P_ID int FOREIGN KEY(P_ID) REFERENCES Payment(P_ID),
+Quantity int,
+Total_Price int,);
+
+CREATE TABLE Accounts(
+Entry_No INT PRIMARY KEY IDENTITY (10001,1),
+[Type] VARCHAR(10),
+E_id int FOREIGN KEY(E_ID) REFERENCES Expense(E_ID),
+Sell_ID int FOREIGN KEY(Sell_ID) REFERENCES Sales(Sell_ID),
+[Name] VARCHAR(25),
+[Discription] VARCHAR(45),
+Credit int,
+Debit int);
+alter table Accounts drop Balance;
+drop table Accounts
+create trigger tr_Inventory
+on Inventory 
+after insert
+as begin
+Declare @Type varchar(10)
+Declare @Name varchar(10)
+Declare @Description varchar(45)
+Declare @Total int
+Declare @Quantity int
+Declare @Price int
+Declare @I_ID int
+select @I_ID = I_ID from inserted
+select @Type = 'Inventory'
+select @Quantity = Quantity from inserted
+select @Price = Price from inserted
+select @Name = Inventory_Name from inserted 
+select @Description = 'Quantity('+cast( @Quantity as varchar(10))+ ') x Price('+cast(@Price as varchar(10))+ ') = '
+select @Total =  Price*Quantity from inserted
+insert into Expense values(null,null,null,@I_ID,@Type,@Name,@Description,@Total)
+end
+select * from Stock;
+create trigger tr_Stock
+on Stock 
+after insert
+as begin
+Declare @Type varchar(10)
+Declare @Name varchar(10)
+Declare @Description varchar(45)
+Declare @Total int
+Declare @Quantity int
+Declare @Price int
+Declare @I_ID int
+select @I_ID = S_ID from inserted
+select @Type = 'Stock'
+select @Quantity = Quantity from inserted
+select @Price = Price from inserted
+select @Name = Stock_Name from inserted 
+select @Description = 'Quantity('+cast( @Quantity as varchar(10))+ ') x Price('+cast(@Price as varchar(10))+ ') = '
+select @Total =  @Price*@Quantity
+insert into Expense values(null,@I_ID,null,null,@Type,@Name,@Description,@Total)
+end
+select * from Incentives
+create trigger tr_Incentives
+on Incentives 
+after insert
+as begin
+Declare @Type varchar(10)
+Declare @Name varchar(15)
+Declare @Description varchar(35)
+Declare @Total int
+Declare @ID int
+select @ID = Incentives_ID from inserted
+select @Type = 'Bounus'
+select @Name = User_Name from Staff where Staff_ID = (Select Staff_ID from inserted)
+select @Description = 'Bounus Given to staff member'
+select @Total =  Ammount from inserted
+insert into Expense values(@ID,null,null,null,@Type,@Name,@Description,@Total)
+end
+
+create trigger tr_Bill
+on Bills 
+after insert
+as begin
+Declare @Type varchar(10)
+Declare @Name varchar(15)
+Declare @Description varchar(35)
+Declare @Total int
+Declare @ID int
+select @ID = Bill_ID from inserted
+select @Type = 'Utiliti Bill'
+select @Name = B_Name from inserted 
+select @Description = 'Utility bill paid'
+select @Total =  Total from inserted
+insert into Expense values(null,null,@ID,null,@Type,@Name,@Description,@Total)
+end
+
+create trigger tr_Expence
+on Expense 
+after insert
+as begin
+Declare @Type varchar(10)
+Declare @ID int
+Declare @Name varchar(15)
+Declare @Description varchar(35)
+Declare @Credit int
+Declare @Debit int
+select @Type = 'Expence' 
+select @ID = E_ID from inserted
+select @Name = [Name] from inserted 
+select @Description = [Discription] from inserted 
+select @Credit =  Total from inserted
+select @Debit =  null
+insert into Accounts values(@Type,@ID,null,@Name,@Description,@Credit,@Debit)
+end
+select * from Accounts
+
+
+create trigger tr_Sales
+on Sales 
+after insert
+as begin
+Declare @Type varchar(10)
+Declare @ID int
+Declare @Name varchar(15)
+Declare @Description varchar(35)
+Declare @Credit int
+Declare @Debit int
+select @Type = 'Sales'
+select @ID = Sell_ID from inserted
+select @Name =  Item_Name from Item where Item_ID = (Select Item_ID from Outlet where O_ID = (select O_id from Inserted))
+select @Description = 'Sale of a Product' 
+select @Credit =  null
+select @Debit =  Total_Price from inserted
+insert into Accounts values(@Type,null,@ID,@Name,@Description,@Credit,@Debit)
+end
+select incentive from staff

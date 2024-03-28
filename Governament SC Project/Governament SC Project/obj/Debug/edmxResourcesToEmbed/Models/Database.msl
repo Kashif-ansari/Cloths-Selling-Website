@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="GSFC_ProjectEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="Model.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="Entry_No" ColumnName="Entry_No" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="E_id" ColumnName="E_id" />
+          <ScalarProperty Name="Sell_ID" ColumnName="Sell_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bills">
+      <EntityTypeMapping TypeName="Model.Bill">
+        <MappingFragment StoreEntitySet="Bills">
+          <ScalarProperty Name="Bill_ID" ColumnName="Bill_ID" />
+          <ScalarProperty Name="B_Name" ColumnName="B_Name" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="Model.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="C_ID" ColumnName="C_ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Confirm_Password" ColumnName="Confirm_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="Model.Expense">
+        <MappingFragment StoreEntitySet="Expense">
+          <ScalarProperty Name="E_ID" ColumnName="E_ID" />
+          <ScalarProperty Name="Incentives_ID" ColumnName="Incentives_ID" />
+          <ScalarProperty Name="Stock_ID" ColumnName="Stock_ID" />
+          <ScalarProperty Name="Bill_ID" ColumnName="Bill_ID" />
+          <ScalarProperty Name="I_ID" ColumnName="I_ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Incentives">
+      <EntityTypeMapping TypeName="Model.Incentive">
+        <MappingFragment StoreEntitySet="Incentives">
+          <ScalarProperty Name="Incentives_ID" ColumnName="Incentives_ID" />
+          <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+          <ScalarProperty Name="Ammount" ColumnName="Ammount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inventories">
+      <EntityTypeMapping TypeName="Model.Inventory">
+        <MappingFragment StoreEntitySet="Inventory">
+          <ScalarProperty Name="I_ID" ColumnName="I_ID" />
+          <ScalarProperty Name="Inventory_Name" ColumnName="Inventory_Name" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="Model.Item">
+        <MappingFragment StoreEntitySet="Item">
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Outlets">
+      <EntityTypeMapping TypeName="Model.Outlet">
+        <MappingFragment StoreEntitySet="Outlet">
+          <ScalarProperty Name="O_ID" ColumnName="O_ID" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="Model.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="Model.Sale">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="Sell_ID" ColumnName="Sell_ID" />
+          <ScalarProperty Name="C_id" ColumnName="C_id" />
+          <ScalarProperty Name="O_id" ColumnName="O_id" />
+          <ScalarProperty Name="P_ID" ColumnName="P_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Staffs">
+      <EntityTypeMapping TypeName="Model.Staff">
+        <MappingFragment StoreEntitySet="Staff">
+          <ScalarProperty Name="Staff_ID" ColumnName="Staff_ID" />
+          <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+          <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Confirm_Password" ColumnName="Confirm_Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="Model.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="S_ID" ColumnName="S_ID" />
+          <ScalarProperty Name="Stock_Name" ColumnName="Stock_Name" />
+          <ScalarProperty Name="Vendor_ID" ColumnName="Vendor_ID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vendors">
+      <EntityTypeMapping TypeName="Model.Vendor">
+        <MappingFragment StoreEntitySet="Vendor">
+          <ScalarProperty Name="V_ID" ColumnName="V_ID" />
+          <ScalarProperty Name="Vendor_Name" ColumnName="Vendor_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

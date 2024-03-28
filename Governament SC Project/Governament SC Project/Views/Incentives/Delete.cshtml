@@ -1,0 +1,72 @@
+﻿@model Governament_SC_Project.Models.Incentive
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h3>
+    <b>
+        <font color="green">
+            @Html.ActionLink("Government Service for Citizen", "Index", "Default", new { area = "" }, new { @class = "navbar-brand" })
+</h3></font></b>
+            @Html.ActionLink("Accounts", "Index", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Customers", "Index", "Customers", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Bills", "Index", "Bills", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Expenses", "Index", "Expenses", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Incentives", "Index", "Incentives", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Inventories", "Index", "Inventories", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Items", "Index", "Items", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Outlets", "Index", "Outlets", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Payments", "Index", "Payments", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Sales", "Index", "Sales", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Staffs", "Index", "Staffs", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Stocks", "Index", "Stocks", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Vendors", "Index", "Vendors", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Staff Logout", "Logouts", "Logins", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav"></ul>
+        </div>
+    </div>
+</div>
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Incentive</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ammount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ammount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Staff.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Staff.First_Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

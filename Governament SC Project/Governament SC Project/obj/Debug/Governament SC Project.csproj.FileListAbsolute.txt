@@ -1,0 +1,50 @@
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\ApplicationInsights.config
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\csc.exe
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\vbc.exe
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\VBCSCompiler.exe
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Governament SC Project.dll.config
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Governament SC Project.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Governament SC Project.pdb
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\EntityFramework.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\EntityFramework.SqlServer.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.Web.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.ApplicationInsights.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Helpers.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Mvc.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Razor.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Webpages.Deployment.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Webpages.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Webpages.Razor.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\EntityFramework.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\EntityFramework.SqlServer.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.Web.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.ApplicationInsights.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Razor.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Webpages.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Webpages.Deployment.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Webpages.Razor.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Helpers.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\bin\System.Web.Mvc.xml
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\obj\Debug\Governament SC Project.csprojResolveAssemblyReference.cache
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\obj\Debug\Governament SC Project.dll
+C:\Users\KASHIF ANSARI\MKashif Ansari\PAFKIET\GSS DBMS Project\Governament SC Project\Governament SC Project\obj\Debug\Governament SC Project.pdb

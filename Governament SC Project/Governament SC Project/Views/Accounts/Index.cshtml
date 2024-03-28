@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Governament_SC_Project.Models.Account>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h3>
+                <b>
+                    <font color="green">
+                        @Html.ActionLink("Government Service for Citizen", "Index", "Default", new { area = "" }, new { @class = "navbar-brand" })
+            </h3></font></b>
+            @Html.ActionLink("Accounts", "Index", "Accounts", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Customers", "Index", "Customers", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Bills", "Index", "Bills", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Expenses", "Index", "Expenses", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Incentives", "Index", "Incentives", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Inventories", "Index", "Inventories", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Items", "Index", "Items", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Outlets", "Index", "Outlets", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Payments", "Index", "Payments", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Sales", "Index", "Sales", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Staffs", "Index", "Staffs", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Stocks", "Index", "Stocks", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Vendors", "Index", "Vendors", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Staff Logout", "Logouts", "Logins", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav"></ul>
+        </div>
+    </div>
+</div>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Credit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Debit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expense.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sale.Sell_ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Debit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expense.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sale.Sell_ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Entry_No }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Entry_No }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Entry_No })
+        </td>
+    </tr>
+}
+
+</table>
